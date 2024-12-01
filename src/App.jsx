@@ -1,6 +1,5 @@
 // import OnInputEvent from "./components/OnInputEvent";
 
-import UncontrolledComonent from "./components/UncontrolledComonent";
 
 // import { EventPropagtion } from "./components/EventPropagtion";
 
@@ -18,11 +17,14 @@ import UncontrolledComonent from "./components/UncontrolledComonent";
 
 // import ControlledComponent from "./components/ControlledComponent";
 
+// import UncontrolledComonent from "./components/UncontrolledComonent";
+
+import UseRef from "./hooks/UseRef";
 
 function App() {
   return (
     <>
-    <UncontrolledComonent />
+    <UseRef />
     </>
   );
 }

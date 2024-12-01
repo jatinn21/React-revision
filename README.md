@@ -158,3 +158,14 @@ This approach helps avoid duplication and keeps the state simpler and more manag
 - Side Effects : aap apna kaam karo, dusre se matlab mat rakho. Is is an operation that that affects something outside the scope of a function (Pure Function). In React, useEffect helps to handle side effects. Examples are Fetching Data as a side effect So when you fetch data in a react component, you are performing a side effect because : 
  - External Interaction : you are interacting with the external data source such as API or a server.
  - State Updates : the fetched data will update the state of the component, causing a rerender of the component.
+
+
+# 3. useRef
+
+- React hook that lets you reference a value that is not needed for rendering.
+
+- unlike states, it's directly mutable.
+
+- You can access the value using yourRef.current;
+
+- Used with uncontrolled React components.
