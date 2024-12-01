@@ -169,3 +169,7 @@ This approach helps avoid duplication and keeps the state simpler and more manag
 - You can access the value using yourRef.current;
 
 - Used with uncontrolled React components.
+
+- React forwardRef allows parent components to move down or forward refs to children. It gives a child component a reference to the DOM entity create by the parent component in react. This helps child components to read and modify the element from any location from any location where it is used.
+
+- forwardRef has been deprecated. Now we can simply pass it into props like we pass the state. LOVE U REACT FOR THIS.
