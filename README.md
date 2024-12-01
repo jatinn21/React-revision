@@ -25,7 +25,7 @@
   - onBlur : Triggered when an element loses focus.
   - onInput : Triggered when the value of an input element is changed (similar to onChange)
 
-![alt text](image.png)
+![Synthetic Event](image.png)
 
 ## Some Important Terms :
 
@@ -47,3 +47,5 @@
     </code>
 
 - Event Delegation: Attach a single listener to a parent element and handle events for all child elements.
+
+- ![Propagtion Explanation](image-1.png)

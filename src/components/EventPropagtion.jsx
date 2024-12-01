@@ -28,3 +28,14 @@ export const EventPropagtion = () => {
     </div>
   );
 };
+
+
+// In Vanilla JS, We do the same thing of enabling the capture phase (by default is bubbling phase) , we enable it using the second parameter of the event handler like this :
+
+const grandParent = document.querySelector('.grand-parent');
+grandParent.addEventListener('click', handleGrandParentClick, true);
+
+const parent = document.querySelector('.parent');
+parent.addEventListener('click', handleParentClick, true);
+
+// The third parameter (true) tells the browser to use the Capturing phase.
