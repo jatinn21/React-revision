@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function LiftingUpTheState() {
+export default function LiftingUpTheStateEx1() {
   const [sort, setSort] = useState(true);
   const [users, setUsers] = useState([
     {
