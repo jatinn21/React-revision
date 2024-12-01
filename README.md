@@ -62,7 +62,7 @@
   ![Component and its Children will be re-render](image-4.png)
  
 <br>
-<br>
+<br> 
 <br>
 
 # Hooks
@@ -76,3 +76,9 @@
 - This type of function which starts with "use" is called hook.
 
 - this is a special function which has some features provided by react.js
+
+
+### Derived state :
+-  any state that can be computed based on the other state or props. It is not stored directly in the component's state but is calculated when needed.
+This approach helps avoid duplication and keeps the state simpler and more manageable.
+ Ex : const userCount = users.length;
