@@ -82,3 +82,8 @@
 -  any state that can be computed based on the other state or props. It is not stored directly in the component's state but is calculated when needed.
 This approach helps avoid duplication and keeps the state simpler and more manageable.
  Ex : const userCount = users.length;
+
+
+### Lifting up the State : 
+- a pattern in react where you move the state from child components to a common parent component so that multiple child components can share the same state. Not only values by the events handlers as well so that child components cna update the state as well and parent state value can be updated by child.
+- Important when multiple sibling components need the same state, you can simiply lift the state to their nearest common parent component. You want this because you can't share the same state between sibling components. it can only be shared from parent to child (one-direction flow from top to bottom and not side to side)
