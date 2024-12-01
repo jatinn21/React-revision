@@ -1,11 +1,14 @@
 export const EventPropagtion = () => {
-  const handleGrandParentClick = () => {
+  const handleGrandParentClick = (e) => {
+    e.stopPropagation(); 
     console.log("Grand parent clicked");
   };
-  const handleParentClick = () => {
+  const handleParentClick = (e) => {
+    e.stopPropagation(); 
     console.log("Parent clicked");
   };
-  const handleChildClick = () => {
+  const handleChildClick = (e) => {
+    e.stopPropagation(); 
     console.log("Child clicked");
   };
 
