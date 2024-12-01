@@ -77,6 +77,8 @@
 
 - this is a special function which has some features provided by react.js
 
+- Always use useState cleanup function to clear intervals else it will create a memory leak because after every time the state will change and the component will be re-rendered again and again.
+
 
 ### Derived state :
 -  any state that can be computed based on the other state or props. It is not stored directly in the component's state but is calculated when needed.
