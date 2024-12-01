@@ -9,6 +9,8 @@
 - when we add the item in the beginning of the array :  instead of entering the array index as an key, make sure the key doesn't change because in our case index is not sure to differentiate the elements
 ![Adding element in the start ](image-6.png)
 
+<hr>
+
 ## Event Handling
 
 - process of capturing and responding to user interactions such as clicks or form submissions, within a React appliction.
@@ -75,9 +77,28 @@
 
   ![Component and its Children will be re-render](image-4.png)
  
+
+
+- React Controlled components :  where form data is handled by React Component state, that is called controlled components. This means that State Management ( the value of the input field is controlled by react state using useState) , Event Handlers ( Changes to the input field like typing into a text field are handled by React event handlers like onChange,etc) and State Updates ( When the user interacts with the form input, React state is updated through the event handlers and the input value reflects the current state value)
+
+- React Uncontrolled components : The value of the input is managed by the browser (DOM) rather than React. No useState hook for value: You don't bind the input value to a React state variable. Refs: You typically use refs to access and modify the value of the form element. It is imperative way where you tells how to rather than what you want
+
+![Uncontrolled Component](image-10.png)
+
+
+
 <br>
 <br> 
 <br>
+
+
+
+
+
+
+<hr>
+
+
 
 # Hooks
 - Let you use different react features from your components.
@@ -108,6 +129,7 @@ In this case, when the component re-renders, React will try to match the hooks i
 - Always use useState cleanup function to clear intervals else it will create a memory leak because after every time the state will change and the component will be re-rendered again and again.
 
 - It tooks some time to change the state so if you change the value and then immediately try to console the state, you will get the old state value.
+
 
 ### Derived state :
 -  any state that can be computed based on the other state or props. It is not stored directly in the component's state but is calculated when needed.
