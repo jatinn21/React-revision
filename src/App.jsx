@@ -4,12 +4,14 @@
 // import DerivedState from "./components/DerivedState";
 // import LiftingUpTheStateEx1 from "./components/LiftingUpTheStateEx1";
 // import LiftingUpTheStateEx2 from "./components/LiftingUpTheStateEx2";
-import CleanUpFunction from "./components/CleanUpFunction";
+// import CleanUpFunction from "./components/CleanUpFunction";
+
+import KeysAreImportant from "./components/KeysAreImportant";
 
 function App() {
   return (
     <>
-      <CleanUpFunction />
+    <KeysAreImportant />
     </>
   );
 }

@@ -1,3 +1,14 @@
+## Keys Are Important
+
+- a string or a number that uniquely identifies it among other items in that array.
+- Keys tell React which array item each component corresponds to, so that it can match them up later. This is because important if the array items can move (eg. due to sorting) , get inserted or deleted. 
+- React will perform reconciliation to differentiate which item has been updated or changed or been added or removed.
+- Rules are simple -> Keys must be unique and must not be changed
+- When we add the new item in the last 
+![When we try to add item in the last](image-5.png)
+- when we add the item in the beginning of the array :  instead of entering the array index as an key, make sure the key doesn't change because in our case index is not sure to differentiate the elements
+![Adding element in the start ](image-6.png)
+
 ## Event Handling
 
 - process of capturing and responding to user interactions such as clicks or form submissions, within a React appliction.
@@ -28,6 +39,9 @@
 ![Synthetic Event](image.png)
 
 ## Some Important Terms :
+
+- Side Effects : changes or interactions that occur outside of the scope of the function or block of code.
+![Side Effects](image-9.png)
 
 - Event Propagation : refers to the process of how events travels or propagate through the DOM hierarchy. In JS there are two phases of it : capturing ( starts from top or the root of the DOM and goes down to the target element ) and bubbling phase ( opp of capturing phase ).
 
@@ -66,6 +80,20 @@
 <br>
 
 # Hooks
+- Let you use different react features from your components.
+- It starts with use_ _ _ _ _   like useEffect, useState, etc. 
+
+## Rules
+- It can only be used at the top level of your component.
+- Don't call hooks inside loops, conditions or nested functions.
+- Call hooks only from React function components or custom Hooks. Don't call hooks from regular javascript functions or in Class components.
+- You can create custom hooks by creating functions starting with use keyword and this will ensure that React can identify it as a Hook (ex : useFetch, useForm)
+- Hooks are called in the same order. React assigns a unique identifier to each hook during the initial render. This identifier is based on the order of the hooks in the code.
+like ![alt text](image-7.png)
+and you tried this ![alt text](image-8.png)
+In this case, when the component re-renders, React will try to match the hooks in the order they are called. If someCondition is false, the useState("John") hook won't be called, and the internal hook list will not match up with what React expects, causing errors.
+
+
 
 ## 1. useState in React JS
 
@@ -79,6 +107,7 @@
 
 - Always use useState cleanup function to clear intervals else it will create a memory leak because after every time the state will change and the component will be re-rendered again and again.
 
+- It tooks some time to change the state so if you change the value and then immediately try to console the state, you will get the old state value.
 
 ### Derived state :
 -  any state that can be computed based on the other state or props. It is not stored directly in the component's state but is calculated when needed.
