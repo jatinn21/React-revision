@@ -9,7 +9,7 @@
 - very similar process that we have seen in Standard Javascript event handling but with some key differences such as here we are using <u>Synthetic Events</u> for cross-browser compatibility and providing consistent event handling across different elements and browser.
   In Javascript we get an Event Object instead of Synthetic Event Object
 
-#### SyntheticBaseEvent In React
+## SyntheticBaseEvent In React
 
 - when you handle events in react, like clicking a button or typing in an input field, we call that events "SyntheticBaseEvent" in React.
 - Its Basically a wrapper around the browser's native event, that make sure that events behave consistent around browsers.
@@ -46,6 +46,33 @@
     );
     </code>
 
+  ![Propagtion Explanation](image-1.png)
+
 - Event Delegation: Attach a single listener to a parent element and handle events for all child elements.
 
-- ![Propagtion Explanation](image-1.png)
+- Reconciliation : The Virtual DOM is a programming concept where an virtual representation of the UI is kept in memory and synced with the "real" DOM by a library such as ReactDOM. This process is called reconciliation.  (OR) the process through which React updates the DOM.
+
+  - Diffing Algorithm : Diffing short for Differences Algorithm. and is used to differentiate the DOM Tree for effecient updates. 
+
+  ![How DOM is Updated](image-2.png)
+  ![Updates the DOM ](image-3.png)
+
+  One thing to remember is that when react creates a new DOM tree, it will re-run or re-render the affected component and all its children. It will not re-render other components.
+
+  ![Component and its Children will be re-render](image-4.png)
+ 
+<br>
+<br>
+<br>
+
+# Hooks
+
+## 1. useState in React JS
+
+- In React, state refers to an object that holds data or information about the component. State is managed within the component (just like the variables declared in function). However, state changes make the component re-render so that the UI is synchronized with the the state.
+
+- State is dynamic and mutable. When the state changes, React responds to it and update the DOM based on that. We have useState hook to update the state.
+
+- This type of function which starts with "use" is called hook.
+
+- this is a special function which has some features provided by react.js
