@@ -126,8 +126,6 @@ In this case, when the component re-renders, React will try to match the hooks i
 
 - this is a special function which has some features provided by react.js
 
-- Always use useState cleanup function to clear intervals else it will create a memory leak because after every time the state will change and the component will be re-rendered again and again.
-
 - It tooks some time to change the state so if you change the value and then immediately try to console the state, you will get the old state value.
 
 
@@ -140,3 +138,23 @@ This approach helps avoid duplication and keeps the state simpler and more manag
 ### Lifting up the State : 
 - a pattern in react where you move the state from child components to a common parent component so that multiple child components can share the same state. Not only values by the events handlers as well so that child components cna update the state as well and parent state value can be updated by child.
 - Important when multiple sibling components need the same state, you can simiply lift the state to their nearest common parent component. You want this because you can't share the same state between sibling components. it can only be shared from parent to child (one-direction flow from top to bottom and not side to side)
+
+<hr>
+
+# 2. useEffect Hook
+
+- It handles side-effects in functional components.
+
+- Initial Render : When the component mounts, useEffect can run its effect function to perform operations like data fetching.
+
+- Dependencies : The second argument, an array of dependencies, which determines when the effect function should re-run. If any value in this array changes, the effect will rerun.
+
+- Clean-up funciton : useEffect can return a function called cleanup function to clean up after the effect function such as unsubscribe the event or cleaning up the timer.
+
+- Always use useState cleanup function to clear intervals else it will create a memory leak because after every time the state will change and the component will be re-rendered again and again.
+
+- Pure Function : In React, functions are pure, meaning that they will return the same output for the same input without causing side effects.
+
+- Side Effects : aap apna kaam karo, dusre se matlab mat rakho. Is is an operation that that affects something outside the scope of a function (Pure Function). In React, useEffect helps to handle side effects. Examples are Fetching Data as a side effect So when you fetch data in a react component, you are performing a side effect because : 
+ - External Interaction : you are interacting with the external data source such as API or a server.
+ - State Updates : the fetched data will update the state of the component, causing a rerender of the component.
