@@ -36,31 +36,45 @@
 
 // ------------REACT ROUTER---------------
 
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import TermsAndConditions from "./components/TermsAndConditions";
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/contact",
-      element: <Contact />,
-    },
-    {
-      path: '/terms-and-conditions',
-      element: <TermsAndConditions />,
-    }
-  ]);
+  // --------Way 1------------------
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Home />,
+  //   },
+  //   {
+  //     path: "/about",
+  //     element: <About />,
+  //   },
+  //   {
+  //     path: "/contact",
+  //     element: <Contact />,
+  //   },
+  //   {
+  //     path: '/terms-and-conditions',
+  //     element: <TermsAndConditions />,
+  //   }
+  // ]);
+
+  // --------Way 2------------------
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      </Route>
+    )
+  )
+
   return <RouterProvider router={router} />
 }
 
