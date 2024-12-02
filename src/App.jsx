@@ -1,6 +1,5 @@
 // import OnInputEvent from "./components/OnInputEvent";
 
-
 // import { EventPropagtion } from "./components/EventPropagtion";
 
 // import UseEffect,{SiblingComponent} from "./hooks/UseEffect";
@@ -33,50 +32,42 @@
 
 // export default App;
 
-
 // ------------REACT ROUTER---------------
 
-import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import TermsAndConditions from "./components/TermsAndConditions";
+import AppLayout from "./layout/AppLayout";
 
 const App = () => {
-  // --------Way 1------------------
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Home />,
-  //   },
-  //   {
-  //     path: "/about",
-  //     element: <About />,
-  //   },
-  //   {
-  //     path: "/contact",
-  //     element: <Contact />,
-  //   },
-  //   {
-  //     path: '/terms-and-conditions',
-  //     element: <TermsAndConditions />,
-  //   }
-  // ]);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/terms-and-conditions",
+          element: <TermsAndConditions />,
+        },
+      ],
+    },
+  ]);
 
-  // --------Way 2------------------
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-      </Route>
-    )
-  )
-
-  return <RouterProvider router={router} />
-}
+  return <RouterProvider router={router} />;
+};
 
 export default App;
-
