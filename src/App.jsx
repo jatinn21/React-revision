@@ -37,7 +37,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./components/Home";
 import About from "./components/About";
-import Contact from "./components/Contact";
+import Contact, { contactData } from "./components/Contact";
 import TermsAndConditions from "./components/TermsAndConditions";
 import AppLayout from "./layout/AppLayout";
 
@@ -58,6 +58,7 @@ const App = () => {
         {
           path: "/contact",
           element: <Contact />,
+          action: contactData,
         },
         {
           path: "/terms-and-conditions",

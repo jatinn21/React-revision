@@ -173,3 +173,15 @@ This approach helps avoid duplication and keeps the state simpler and more manag
 - React forwardRef allows parent components to move down or forward refs to children. It gives a child component a reference to the DOM entity create by the parent component in react. This helps child components to read and modify the element from any location from any location where it is used.
 
 - forwardRef has been deprecated. Now we can simply pass it into props like we pass the state. LOVE U REACT FOR THIS.
+
+
+
+
+
+## React Router Hook :
+# Form hook 
+- use Form from react-router and use method and action.
+- Give name attribute to every input field.
+- Make a Async "formDataFun" function for displaying the entire form data (we don't know when the data is going to come)  after submitting the form that will take a request parameter and the request parameter have a formData property. and make this store this formData and convert it into an object and return that object : ![Way of getting the data](image-13.png)
+- If you get the error of "Error: You made a POST request to "/contact" but did not provide an `action` for route "0-2", so there is no way to handle the request.
+    at getInternalRouterError", then you should use the third argument in the route object that is action in the same page where the form is used. and pass the function that we are using for form data "formDataFun". 
